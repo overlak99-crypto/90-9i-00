@@ -1,0 +1,293 @@
+/* تنسيقات عامة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Amiri', serif;
+    background-color: #f7f4ef;
+    color: #2b1d0c;
+}
+
+/* خلفية وتصميم صفحة تسجيل الدخول */
+body.login-body {
+    background-color: #2b1d0c !important;
+    background-image: linear-gradient(135deg, #3d2711 0%, #1a1107 100%) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-card {
+    background: #fff8f0;
+    border: 2px solid #8c6239;
+    border-radius: 12px;
+    padding: 35px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.login-card h2 {
+    color: #2b1d0c;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.login-card .subtitle {
+    color: #7a5c3f;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+    text-align: right;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #4a2c11;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d4c3aa;
+    border-radius: 6px;
+    font-family: 'Amiri', serif;
+    font-size: 16px;
+    background: #fff;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #8c6239;
+    box-shadow: 0 0 5px rgba(140, 98, 57, 0.3);
+}
+
+.btn-primary {
+    background-color: #8c6239;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-family: 'Amiri', serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #4a2c11;
+}
+
+.switch-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.switch-text a {
+    color: #8c6239;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+/* الهيدر والعناوين العلوية */
+.admin-header, .main-header {
+    background-color: #2b1d0c;
+    color: #e2d2b8;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #8c6239;
+}
+
+.admin-header h1, .logo-area h1 {
+    font-size: 26px;
+}
+
+.header-actions a, .btn-login-nav {
+    background-color: #8c6239;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.header-actions a:hover, .btn-login-nav:hover {
+    background-color: #4a2c11;
+}
+
+.btn-danger {
+    background-color: #a83232;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+    font-size: 14px;
+}
+
+.btn-danger:hover {
+    background-color: #822424;
+}
+
+/* الحاويات والكروت */
+.admin-container, .content-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.admin-card {
+    background: #ffffff;
+    border: 1px solid #d4c3aa;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.admin-card h2 {
+    color: #4a2c11;
+    margin-bottom: 20px;
+    font-size: 22px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* شريط الأقسام */
+.category-bar {
+    max-width: 1000px;
+    margin: 25px auto 10px;
+    padding: 0 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cat-btn {
+    background-color: #e6dfd3;
+    border: 1px solid #d4c3aa;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+    font-size: 16px;
+    color: #4a2c11;
+    transition: 0.3s;
+}
+
+.cat-btn.active, .cat-btn:hover {
+    background-color: #4a2c11;
+    color: #fff;
+}
+
+/* شبكة الكروت في الرئيسية */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.story-card {
+    background: #ffffff;
+    border: 1px solid #d4c3aa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-tag {
+    font-size: 12px;
+    background-color: #f3e8d7;
+    color: #8c6239;
+    padding: 3px 10px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-title {
+    color: #2b1d0c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    white-space: pre-line;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+.fav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+    color: #a83232;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background: #2b1d0c;
+    color: #8c6239;
+    margin-top: 60px;
+    font-size: 15px;
+    border-top: 3px solid #8c6239;
+}

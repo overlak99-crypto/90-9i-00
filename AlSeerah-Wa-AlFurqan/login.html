@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - السيرة والفرقان</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+
+    <div class="login-card">
+        <h2>السيرة والفرقان</h2>
+        <p class="subtitle">بوابة التاريخ الإسلامي والسيرة النبوية</p>
+
+        <!-- نموذج تسجيل الدخول -->
+        <form id="login-form">
+            <div class="input-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" id="login-email" placeholder="ادخل البريد الإلكتروني" required>
+            </div>
+
+            <div class="input-group">
+                <label>كلمة المرور</label>
+                <input type="password" id="login-password" placeholder="ادخل كلمة المرور" required>
+            </div>
+
+            <button type="submit" class="btn-primary">تسجيل الدخول</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('login-email').value.trim().toLowerCase();
+            const password = document.getElementById('login-password').value.trim();
+
+            if (email === "ziad@alseerah.com" && password === "247612") {
+                alert("أهلاً بك يا عم زياد، جاري التوجيه لوحة التحكم...");
+                window.location.href = 'admin.html';
+            } else {
+                alert("تم تسجيل الدخول بنجاح!");
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

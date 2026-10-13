@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - السيرة والفرقان</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- خط أميري الكلاسيكي من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+    <!-- شريط العناوين العلوية -->
+    <header class="admin-header">
+        <h1>لوحة إدارة "السيرة والفرقان"</h1>
+        <div class="header-actions">
+            <a href="index.html" class="btn-secondary">مشاهدة الموقع</a>
+            <a href="login.html" class="btn-danger">تسجيل الخروج</a>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <!-- قسم إضافة محتوى جديد -->
+        <section class="admin-card">
+            <h2>إضافة موضوع / قصة جديدة</h2>
+            <form id="add-story-form">
+                
+                <div class="input-group">
+                    <label>القسم</label>
+                    <select id="story-category" required>
+                        <option value="">اختر القسم...</option>
+                        <option value="quran">القرآن الكريم والتفسير</option>
+                        <option value="seerah">السيرة النبوية</option>
+                        <option value="prophets">قصص الأنبياء</option>
+                        <option value="battles">غزوات ومعارك تاريخية</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>عنوان الموضوع</label>
+                    <input type="text" id="story-title" placeholder="مثال: غزوة بدر الكبرى" required>
+                </div>
+
+                <!-- خانة رفع الصورة ومعاينتها -->
+                <div class="input-group">
+                    <label>إضافة صورة مع الموضوع (اختياري)</label>
+                    <input type="file" id="story-image" accept="image/*">
+                    
+                    <div id="image-preview-container" style="margin-top: 10px; display: none;">
+                        <img id="image-preview" src="" alt="معاينة الصورة" style="max-width: 100%; max-height: 200px; border-radius: 5px; border: 1px solid #d4c3aa;">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>محتوى التفاصيل (النص)</label>
+                    <textarea id="story-content" rows="8" placeholder="اكتب تفاصيل القصة أو الموضوع هنا..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">نشر الموضوع</button>
+            </form>
+        </section>
+
+        <!-- قسم عرض الموضوعات المنشورة -->
+        <section class="admin-card">
+            <h2>الموضوعات المنشورة حالياً</h2>
+            <div id="stories-list" class="stories-list">
+                <p class="empty-msg">لا توجد موضوعات منشورة حتى الآن.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
